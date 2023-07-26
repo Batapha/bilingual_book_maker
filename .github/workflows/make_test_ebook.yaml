@@ -36,11 +36,11 @@ jobs:
 
       - name: translate
         run: |
-              python3 make_book.py --book_name "Liber_Esther.epub" --language zh-hans
+              python3 make_book.py --book_name "Global_Age_Europe.epub" --language zh-hans
 
       - name: Rename and Upload ePub
         if: env.OPENAI_API_KEY != null
         uses: actions/upload-artifact@v2
         with:
           name: epub_output
-          path: "Liber_Esther_bilingual.epub"
+          path: "Global_Age_Europe_bilingual.epub"
