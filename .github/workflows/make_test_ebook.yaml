@@ -36,11 +36,11 @@ jobs:
 
       - name: translate
         run: |
-              python3 make_book.py --book_name "俺だけが使える転生特典【エッチしたらスキルが一個増える】で、気持ちいいことするたびに最強チートスキルを手に入れて異世界無双.epub" --language zh-hans
+              python3 make_book.py --book_name test_books/Through_the_Language_Glass.epub --language zh-hans
 
       - name: Rename and Upload ePub
         if: env.OPENAI_API_KEY != null
         uses: actions/upload-artifact@v2
         with:
           name: epub_output
-          path: "俺だけが使える転生特典【エッチしたらスキルが一個増える】で、気持ちいいことするたびに最強チートスキルを手に入れて異世界無双_bilingual.epub"
+          path: test_books/Through_the_Language_Glass.epub
