@@ -36,11 +36,11 @@ jobs:
 
       - name: translate
         run: |
-              python3 make_book.py --book_name "XXX.epub" --language zh-hans
+              python3 make_book.py --book_name "Psych_Paul_Bloom.epub" --language zh-hans
 
       - name: Rename and Upload ePub
         if: env.OPENAI_API_KEY != null
         uses: actions/upload-artifact@v2
         with:
           name: epub_output
-          path: "XXX_bilingual.epub"
+          path: "Psych_Paul_Bloom_bilingual.epub"
